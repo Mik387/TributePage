@@ -1,0 +1,118 @@
+@import "vars";
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+    font-size: 10px;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.4rem;
+    line-height: 1.8;
+    text-align: center;
+    color: $primary-text-color;
+    background: $primary-background;
+}
+
+/**** Header ****/
+header {
+    background-image: $hero-image;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+
+    .title-container {
+        max-width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    #title {
+        color: $primary-title-color;
+        font-size: 5rem;
+        margin-top: 0;
+    }
+}
+
+/**** Figure ****/
+#figure-container {
+    display: flex;
+    justify-content: center;
+
+    .img-div {
+        background: $secundary-background;
+        padding: 2.5rem 1rem 1rem 1rem;
+        border: 1px solid var $border-color;
+        border-radius: 0.5rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 0.5rem;
+    }
+    .img-caption {
+        color: $secundary-text-color;
+        font-style: italic;
+    }
+}
+
+/**** Section ****/
+section {
+    h2 {
+        color: $secundary-title-color;
+        font-size: 2.5rem;
+    }
+    p {
+        max-width: 55rem;
+        margin: 0 1rem 5rem 1rem;
+        text-align: justify;
+        margin: 0 auto;
+    }
+    ul {
+        max-width: 55rem;
+        margin: 0 auto 5rem auto;
+        text-align: left;
+        list-style-type: circle;
+    }
+    li {
+        margin: 1.6rem 0;
+    }
+}
+
+@media screen and (max-width: 555px) {
+    section {
+        p {
+            margin: 0 1rem 5rem 1rem;
+        }
+        ul {
+            margin: 0 1rem 5rem 1rem;
+        }
+    }
+}
+
+/**** Footer ****/
+footer {
+    color: $footer-text-color;
+    background: $secundary-background;
+    margin: 0;
+    padding: 1rem 0;
+    border: 1px solid $border-color;
+}
+
+/**** Links ****/
+a {
+    color: $link-color;
+    text-decoration: none;
+}
+a:visited {
+    color: $link-color;
+}
